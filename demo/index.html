@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script src='https://unpkg.com/vue@2.2.6'></script>
+<script src="../dist/vue-default-player.js"></script>
+<div id='app'>
+<template>
+	<defult-video :sources="sources" :options="options"></defult-video>
+</template>
+	
+</div>
+<script type="text/javascript">
+var Main={
+	name:'test',
+	data() {
+        return {
+          sources: [{
+          src: 'http://ai-1253836259.cosbj.myqcloud.com/video/%5Cu0074%5Cu0065%5Cu0073%5Cu0074.mp4',
+          type: 'video/mp4',
+        }],
+        options: {
+          autoplay: false,  // 这是一个虚值，，，，，
+          poster: 'http://hivjc2hsms3z25iuuh1.exp.bcevod.com/mda-idgm2brxj5akq04w/mda-idgm2brxj5akq04w.jpg'
+        },
+        }
+      },
+}
+	   var Ctor = Vue.extend(Main)
+    new Ctor().$mount('#app')
+</script>
+</body>
+</html>
